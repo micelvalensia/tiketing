@@ -1,0 +1,72 @@
+footer{
+    background-color: #4672C9;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin-top: 40px !important;
+}
+
+.wrapper-footer{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+
+.logo-footer,.company,.resource,.quick-link,.social-media{
+    width: 20%;
+}
+
+.logo-footer img{
+    width: 100%;
+    height: auto;
+    
+    max-width: 200px;
+}
+
+.social-media{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.media{
+    display: flex;
+}
+
+.social-media img{
+    width: 32%;
+    height: auto;
+    flex-grow: 1;
+}
+
+.foot-li{
+    font-size: clamp(9px, 2vw + 0.1rem, 1rem);
+    color: white;
+    font-weight: 100;
+}
+
+.foot-h4{
+    font-weight: bolder;
+    font-size: clamp(0.7rem, 2vw + 0.2rem, 1.4rem);
+    color: white;
+}
+
+.wrap{
+    line-height: 20px;
+}
+
+@media (min-width: 500px){
+    footer{
+        height: 280px !important;
+    }
+    .wrap{
+        line-height: 40px;
+    }
+    .wrapper-footer{
+        justify-content: space-between;
+    }
+}

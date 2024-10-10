@@ -1,0 +1,201 @@
+a{
+    color: white;
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    height: 40svh;
+    background: url(tiketing/images/heroes.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+
+
+.burger{
+    display: block;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    padding: 4px;
+    backdrop-filter: brightness(40%);
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 20px;
+    z-index: 10;
+}
+
+.burger .bur{
+    height: 4px;
+    width: 100%;
+    background-color: #ced2df;
+}
+
+.bur:nth-child(2){
+    width: 60%;
+}
+
+.profile{
+    background-color: #4672C9;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    transform: translateX(-600px);
+    transition: 0.8s ease-in;
+    z-index: 11;
+}
+
+.profile.in{
+    animation: fadeout 1s ease-in-out ;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.image-profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    background-color: #d9d9d9;
+}
+
+.image-profile img{
+    width: 50%;
+}
+
+.image-profile .profile-name{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #4672C9;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-body{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-body ul{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.profile-body ul li{
+    cursor: pointer;
+}
+
+
+.heroes{
+    width: 100%;
+    display: flex;
+    height: 100%;
+}
+
+.wrapper-heroes{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10%;
+    backdrop-filter: brightness(100%);
+}
+
+.desc-hero{
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 80%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.profile-2{
+    display: none;
+}
+
+
+.list-profile.active{
+    border-bottom: 2px solid white;
+}
+
+
+
+@keyframes fadeout {
+    0%{
+        opacity: 0.5;
+        transform: translateX(-600px);
+    }100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+@media (min-width: 740px){
+    .burger{
+        display: none;
+    }
+    .profile{
+        display: none;
+    }
+    .profile-2{
+        display: flex;
+        width: 90%;
+        padding: 10px;
+        position: absolute;
+        z-index: 2;
+        justify-content: space-around;
+    }
+    .profile-2 .logo{
+        background-color: #4672C9;
+        padding: 5px;
+        border-radius: 10%;
+    }
+    .profile-2 .logo img{
+        width: 60px;
+    }
+    .profile-2 .list-laptop{
+        width: 70%;
+        display: flex;
+        list-style: none;
+        margin-left: 40px;
+        justify-content: space-around;
+        align-items: center;
+        font-weight: bold;
+    }
+    .profile-2 .list-laptop .list-items.active{
+        border-bottom: 2px solid white;
+    }
+    .heroes{
+        margin-top: 2px;
+    }
+}
